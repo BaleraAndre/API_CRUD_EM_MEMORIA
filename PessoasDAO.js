@@ -1,10 +1,12 @@
+// 1- criando array de pessoas 
 let pessoas = [
     { id: 1, nome: 'Alice', email: 'alice@example.com' },
     { id: 2, nome: 'Bob', email: 'bob@example.com' },
     { id: 3, nome: 'Charlie', email: 'charlie@example.com' },
     { id: 4, nome: 'David', email: 'david@example.com' }
   ];
-  
+
+//2 Definindo as funções do CRUD
   function excluirPessoa(req, res) {
     const pessoaId = parseInt(req.params.id);
   
@@ -42,5 +44,6 @@ let pessoas = [
   function getPessoas() {
     return pessoas;
   }
-  
+
+//3- Exportando
   module.exports = { getPessoas, adicionaPessoa, atualizarPessoa, excluirPessoa };
